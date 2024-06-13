@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import NavBars from "../NavBars/NavBars";
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); //lo uso para el menu principalmente 
 
@@ -15,20 +16,12 @@ const Header = () => {
     };
   }, []);
 
-  return (
-    <nav
-      className="bg-gradient-to-b from-black to-secondary-1 text-primary-1 shadow"
-      role="navigation"
-    >
-      <div className="container mx-auto p-4 flex flex-wrap items-center md:flex-nowrap">
-        {isMobile 
-          ? <p>Soy el header MOBILE</p> 
-          : <p>Soy el header WEB</p>
-        }
-      </div>
-    </nav>
-  );
-};
+    return (
+        <>
+        <NavBars />
+        </>
+    )
+}
 
 export default Header;
 
