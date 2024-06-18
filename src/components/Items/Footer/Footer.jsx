@@ -6,12 +6,12 @@ const Footer = () => {
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-4">
                 <div className="flex justify-between items-center">
                     <div className="text-gray-400">
-                        © 2024 Your Company. All rights reserved.
+                        © 2024 Desarrollar. All rights reserved.
                     </div>
                     <div className="flex space-x-4">
                         <a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a>
                         <a href="#" className="text-gray-400 hover:text-white">Terms of Service</a>
-                        <a href="#" className="text-gray-400 hover:text-white">Contact Us</a>
+                        <a href="/contacto" className="text-gray-400 hover:text-white">Contact Us</a>
                     </div>
                 </div>
                 <div className="flex justify-center space-x-4 mt-4">
