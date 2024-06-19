@@ -6,6 +6,7 @@ import Layout from "./components/Pages/Layout/Layout.jsx";
 import Home from "./components/Pages/Home/Home.jsx";
 import Contacto from "./components/Pages/Contacto/Contacto.jsx";
 import "./index.css";
+import Nosotros from "./components/Pages/Nosotros/Nosotros.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/contacto",
         element: <Contacto />,
+      },
+      {
+        path: "/nosotros",
+        element: <Nosotros />,
       },
       {
         path: "*",
