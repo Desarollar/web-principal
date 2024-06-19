@@ -6,7 +6,7 @@ const Card = ({ titulo, precio, descripcion, opciones }) => {
             <div className="max-w-[300px] w-full pt-10 px-10 pb-8 bg-gray-900 rounded-3xl">
                 <div className="text-center mb-6">
                     <h5 className="text-2xl font-semibold text-white mb-3">{titulo}</h5>
-                    <span className="block text-5xl font-bold text-white mb-3">{precio}</span>
+                    <span className="block text-3xl font-bold text-white mb-3">{precio}</span>
                     <span className="block text-gray-300 font-medium mb-6">
                         {descripcion}
                     </span>
@@ -17,7 +17,7 @@ const Card = ({ titulo, precio, descripcion, opciones }) => {
                         <div
                             className="absolute top-0 right-full w-full h-full bg-white transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"
                         ></div>
-                        <span className="relative">buy</span>
+                        <span className="relative">Consultar</span>
                     </a>
                 </div>
                 <ul>

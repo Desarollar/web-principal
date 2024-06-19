@@ -13,7 +13,7 @@ const Popup = ({ message, onClose }) => (
       <p className="text-xl text-justify">{message}</p>
       <button
         onClick={onClose}
-        className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+        className="mt-4 bg-blue-500 hover:bg-blue-800 text-white py-2 px-4 rounded"
       >
         OK
       </button>
@@ -163,7 +163,7 @@ return (
 
         <button
           type="submit"
-          className="mb-4 bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded mt-4 self-center md:self-start"
+          className="mb-4 bg-blue-800 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded mt-4 self-center md:self-start"
           value="Send"
         >
           Enviar
