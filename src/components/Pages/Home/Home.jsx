@@ -3,6 +3,7 @@ import CardPrincipal from "../../Items/CardPrincipal/CardPrincipal";
 import TeamSection from "../../Items/TeamSection/TeamSection";
 import WorkDone from "../../Items/WorkDone/WorkDone";
 import Contacto from "../../Items/Contacto/Contacto";
+import Servicios from "../../Items/Servicios/Servicios";
 const Home = () => {
   const data = [
     {
@@ -64,6 +65,9 @@ const Home = () => {
         ))}
       </div>
       <div id="servicios">
+        <Servicios />
+      </div>
+      <div id="trabajos">
         <WorkDone />
       </div>
       <div id="equipo">
