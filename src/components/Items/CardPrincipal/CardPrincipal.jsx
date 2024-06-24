@@ -23,8 +23,8 @@ const CardPrincipal = () => {
                                 <a href="#" className="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
                             </div> */}
                         </div>
-                        <div className="relative mt-16 h-80 lg:mt-8">
-                            <img className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="App screenshot" width="1824" height="1080" />
+                        <div className="relative mt-16 h-80 lg:mt-0">
+                            <img className="absolute left-0 top-0 w-[38rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="https://firebasestorage.googleapis.com/v0/b/imagenes-memo.appspot.com/o/black-white-portrait-digital-nomads.jpg?alt=media&token=3a4f17f5-643f-4df6-aa9e-f3612158bab5" alt="App screenshot" width="1824" height="1080" />
                         </div>
                     </div>
                 </div>
