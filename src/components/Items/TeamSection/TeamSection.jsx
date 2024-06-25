@@ -1,11 +1,9 @@
-
-
 const people = [
     {
         name: 'Belen Gallardo',
         role: 'Project Manager | Team Leader | Desarrolladora Full Stack',
         imageUrl:
-            'https://media.licdn.com/dms/image/D4D35AQGq3grHGBRUQg/profile-framedphoto-shrink_200_200/0/1687735167585?e=1719075600&v=beta&t=sw-Y9GQx_pE4k5oxf4OzC1VCczWMO3KlMNb3ZHqx5pE',
+            'https://media.licdn.com/dms/image/D4D35AQGq3grHGBRUQg/profile-framedphoto-shrink_200_200/0/1687735167585?e=1719932400&v=beta&t=5JIbvCd8udQJO6SVBFsj6pwbDuHfcs73TDv7Z8m1cCo',
         text: 'Belen aporta un enfoque centrado en el usuario a nuestro proceso de desarrollo. Como diseñadora y desarrolladora full stack, se asegura de que nuestras aplicaciones sean intuitivas y fáciles de usar. Con un ojo agudo para el diseño y una comprensión profunda de la psicología del usuario, Belen crea interfaces que no solo son estéticamente agradables, sino que también mejoran la satisfacción y retención del usuario.'
     },
     {
@@ -22,37 +20,32 @@ const people = [
             'https://avatars.githubusercontent.com/u/110181460?v=4',
         text: 'Emiliano es nuestro experto en desarrollo full stack, lo que significa que tiene la habilidad de trabajar tanto en el front-end como en el back-end de nuestras aplicaciones. Con una sólida formación en ingeniería de software y varios años de experiencia práctica, Emiliano se asegura de que nuestras aplicaciones no solo funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional. Su dominio de tecnologías como React, Node.js y Python es un activo invaluable para nuestro equipo.'
     },
-    // More people...
-]
-
+    // Más personas...
+];
 
 const TeamSection = () => {
     return (
         <div className="bg-white py-24 sm:py-32">
-            <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-                <div className="max-w-2xl">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mb-12">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Equipo de desarrollo</h2>
-                    <p className="mt-6 text-lg leading-8 text-gray-600">
-                    Nuestro equipo está compuesto por profesionales altamente calificados, cada uno especializado en diferentes áreas del desarrollo de software, asegurando que podamos ofrecer soluciones integrales y de alta calidad a nuestros clientes. Permítenos presentarte a algunos de los miembros clave de nuestro 
+                    <p className="mt-2 text-lg leading-8 text-gray-600">
+                        Nuestro equipo está compuesto por profesionales altamente calificados, cada uno especializado en diferentes áreas del desarrollo de software, asegurando que podamos ofrecer soluciones integrales y de alta calidad a nuestros clientes. Permítenos presentarte a algunos de los miembros clave de nuestro equipo.
                     </p>
                 </div>
-                <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                <div className="grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
                     {people.map((person) => (
-                        <li key={person.name}>
-                            <div className="flex items-center gap-x-6">
-                                <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
-                                <div>
-                                    <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-                                    <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
-                                </div>
-                            </div>
-                            <p className="mt-5 text-base leading-7 text-gray-600">{person.text}</p>
-                        </li>
+                        <div key={person.name} className="flex flex-col items-center text-center">
+                            <img className="h-24 w-24 rounded-full object-cover mb-4" src={person.imageUrl} alt={person.name} />
+                            <h3 className="text-lg font-semibold leading-6 text-gray-900">{person.name}</h3>
+                            <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
+                            <p className="mt-3 text-base leading-7 text-gray-600">{person.text}</p>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default TeamSection
+export default TeamSection;
