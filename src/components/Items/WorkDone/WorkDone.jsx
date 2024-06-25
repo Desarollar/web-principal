@@ -1,58 +1,56 @@
+import { useState } from "react";
+import postsData from "./post";
 
-import posts from "./post"
+const Servicios = () => {
+    const [selectedPost, setSelectedPost] = useState(null);
 
-const WorkDone = () => {
+    const handlePostClick = (postId) => {
+        setSelectedPost(postId === selectedPost ? null : postId);
+    };
+
     return (
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Trabajos realizados</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Servicios y soluciones digitales</h2>
                     <p className="mt-2 text-lg leading-8 text-gray-600">
-                        Estos son algunos de nuestros trabajos desarrollados para brindar soluciones a las necesidades de nuestros clientes.
+                        Potencia tu presencia online con nuestro equipo experto
                     </p>
                 </div>
-                <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                    {posts.map((post) => (
-                        <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
-                            <img src={post.image} alt="" className="h-90 w-98 object-cover mb-4" />
-                            <div className="flex items-center gap-x-4 text-xs">
-                                <time dateTime={post.datetime} className="text-gray-500">
-                                    {post.date}
-                                </time>
-                                <a
-                                    href={post.category.href}
-                                    className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                                >
-                                    {post.category.title}
-                                </a>
-                            </div>
-                            <div className="group relative">
-                                <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                    <a href={post.href}>
-                                        <span className="absolute inset-0" />
-                                        {post.title}
-                                    </a>
-                                </h3>
-                                <p className="mt-5 line-clamp-7 text-sm leading-6 text-gray-600">{post.bajada}</p>
-                            </div>
-                            <div className="relative mt-8 flex items-center gap-x-4">
-                                <img src={post.author.imageUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
-                                <div className="text-sm leading-6">
-                                    <p className="font-semibold text-gray-900">
-                                        <a href={post.author.href}>
-                                            <span className="absolute inset-0" />
-                                            {post.author.name}
-                                        </a>
-                                    </p>
-                                    <p className="text-gray-600">{post.author.role}</p>
+                <div className={`mx-auto mt-10 grid gap-8 ${selectedPost ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
+                    {postsData.map((post) => (
+                        <article key={post.id} className={`flex flex-col max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg ${selectedPost && selectedPost !== post.id ? 'hidden' : ''}`}>
+                            <img src={post.image} alt={post.title} className="h-64 object-cover w-full" />
+                            <div className="bg-white p-6 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
+                                    <p className="text-gray-700">{post.bajada}</p>
                                 </div>
+                                <button
+                                    onClick={() => handlePostClick(post.id)}
+                                    className="mt-4 bg-blue-500 hover:bg-blue-800 text-white py-2 px-4 rounded focus:outline-none"
+                                >
+                                    {selectedPost === post.id ? "Ocultar Detalles" : "Ver Detalles"}
+                                </button>
                             </div>
                         </article>
                     ))}
+                    {selectedPost && (
+                        <div className="bg-white rounded-lg shadow-lg flex flex-col justify-start">
+                            {postsData.filter(post => post.id === selectedPost).map(post => (
+                                <div key={post.id}>
+
+                                    <div className="mt-4 p-4 bg-gray-100 rounded-md mt-0">
+                                        <p className="text-gray-700">{post.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default WorkDone
+export default Servicios;
