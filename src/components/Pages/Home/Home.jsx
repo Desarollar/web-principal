@@ -53,7 +53,7 @@ const Home = () => {
       <div className="mt-1" id="inicio">
         <CardPrincipal />
       </div>
-      <div className="flex flex-wrap gap-4 justify-evenly mt-1 mb-10">
+      <div className="flex flex-wrap gap-4 justify-evenly mt-1">
         {data.map((item, index) => (
           <Card
             key={index}
