@@ -20,7 +20,7 @@ const posts = [
 
             Con estas acciones, Asegurandoando logró no solo una mayor presencia online, sino también una plataforma eficiente para la venta y asesoramiento de seguros, brindando transparencia y confianza a sus clientes en la contratación de seguros vendidos de forma online.
         `,
-        image: 'https://i.ibb.co/9wTtNH2/asegurando.png', // 3603 x 3215 tamaño
+        image: 'https://i.ibb.co/nkkMvZD/asegurando-Bajo-Peso.jpg', // 3603 x 3215 tamaño
     },
     {
         id: 2,
@@ -65,7 +65,7 @@ const posts = [
 
             MEMO no solo ayuda a las personas con autismo a seguir una rutina estructurada, sino que también apoya a sus familias y acompañantes terapéuticos al proporcionarles una herramienta eficaz para gestionar las actividades diarias. Disponible en Google Play y App Store, MEMO es una solución accesible y práctica para mejorar la calidad de vida de sus usuarios.
         `,
-        image: 'https://i.ibb.co/4RZyH03/memo1.png',
+        image: 'https://i.ibb.co/XVbpsDj/memo1-Bajo-Peso.jpg',
     },
     // Más posts...
 ]
