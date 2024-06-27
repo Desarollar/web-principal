@@ -30,7 +30,6 @@ const Home = () => {
         "Creación Página de Error 404",
         "Experiencia de usuario (UX) mejorada",
         "Certificado de seguridad SSL",
-        "Desarrollo de tienda Online",
       ],
     },
     {
@@ -53,7 +52,7 @@ const Home = () => {
       <div className="mt-1" id="inicio">
         <CardPrincipal />
       </div>
-      <div className="flex flex-wrap gap-4 justify-evenly mt-1">
+      <div className="flex  flex-wrap gap-4 justify-evenly mt-1">
         {data.map((item, index) => (
           <Card
             key={index}

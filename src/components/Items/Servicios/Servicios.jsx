@@ -9,7 +9,7 @@ const Servicios = () => {
     };
 
     return (
-        <div className="bg-white py-10 sm:py-12">
+        <div className="bg-white  py-10 sm:py-12">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Servicios y soluciones digitales</h2>
@@ -20,7 +20,7 @@ const Servicios = () => {
                 <div className={`mx-auto mt-10 grid gap-8 ${selectedPost ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
                     {postsData.map((post) => (
                         <article key={post.id} className={`flex flex-col max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg ${selectedPost && selectedPost !== post.id ? 'hidden' : ''}`}>
-                            <img src={post.image} alt={post.title} className="h-64 object-cover w-full" />
+                            <img src={post.image} alt={post.title} className="h-64 object-cover mask-gradient-black-transparent   w-full" />
                             <div className="bg-white p-6 flex flex-col justify-between flex-grow">
                                 <div>
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
