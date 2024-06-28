@@ -5,12 +5,9 @@ import whatsappIcon from "../../../assets/whatsapp-icon.png";
 import mail from "../../../assets/mail.png";
 import imagen from "../../../assets/contact.png";
 
-
 const Popup = ({ message, onClose }) => (
   <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-    <div
-      className="bg-white mx-auto rounded-lg p-2 max-w-md"
-    >
+    <div className="bg-white mx-auto rounded-lg p-2 max-w-md">
       <p className="text-xl text-justify">{message}</p>
       <button
         onClick={onClose}
@@ -18,7 +15,6 @@ const Popup = ({ message, onClose }) => (
       >
         OK
       </button>
-
     </div>
   </div>
 );
@@ -30,12 +26,11 @@ const Contacto = () => {
     Telefono: "",
     Email: "",
     Mensaje: "",
-    ok: false,
   });
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const [toHome, setToHome] = useState(false);
-
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleWhatsAppClick = (phoneNumber) => {
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
@@ -44,23 +39,21 @@ const Contacto = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitted(true);
 
-    let ok = true; // Bandera para verificar si al menos un campo requerido está completado
+    let ok = true;
 
-    // Validar campos requeridos
     if (
       formData.Nombre === "" ||
       (formData.Telefono === "" && formData.Email === "") ||
       formData.Mensaje === ""
     ) {
-      // Si el nombre está vacío, o ambos teléfono y correo electrónico están vacíos, o el mensaje está vacío, establecer la bandera ok en falso y mostrar mensaje de error
       ok = false;
       setPopupMessage(
         `Los campos Nombre, Mensaje y al menos uno de Teléfono o Correo Electrónico son requeridos`
       );
       setPopupVisible(true);
     } else {
-      // Si el nombre no está vacío y al menos uno de teléfono o correo electrónico tiene información, y el mensaje no está vacío, continuar con el envío del formulario
       const data = {
         to_name: "Soporte Desarrollar",
         from_name: "www.desarrollar.com.ar",
@@ -79,7 +72,6 @@ const Contacto = () => {
             console.log("SUCCESS!", result.text);
             setPopupMessage("Mensaje enviado correctamente");
             setPopupVisible(true);
-            // Redirigir a la página principal después de 3 segundos
             setToHome(true);
           },
           (error) => {
@@ -119,7 +111,7 @@ const Contacto = () => {
                 name="Nombre"
                 value={formData.Nombre}
                 onChange={handleChange}
-                className={`block w-full p-2 border ${formData.Nombre === "" ? "border-red-500" : "border-gray-300"
+                className={`block w-full p-2 border ${isSubmitted && formData.Nombre === "" ? "border-red-500" : "border-gray-300"
                   } rounded-md`}
               />
             </div>
@@ -131,9 +123,7 @@ const Contacto = () => {
                 name="Telefono"
                 value={formData.Telefono}
                 onChange={handleChange}
-                className={`block w-full p-2 border ${formData.Telefono === ""
-                    ? "border-red-500"
-                    : "border-gray-300"
+                className={`block w-full p-2 border ${isSubmitted && formData.Telefono === "" ? "border-red-500" : "border-gray-300"
                   } rounded-md`}
               />
             </div>
@@ -145,7 +135,7 @@ const Contacto = () => {
             name="Email"
             value={formData.Email}
             onChange={handleChange}
-            className={`block w-full p-2 border ${formData.Email === "" ? "border-red-500" : "border-gray-300"
+            className={`block w-full p-2 border ${isSubmitted && formData.Email === "" ? "border-red-500" : "border-gray-300"
               } rounded-md`}
           />
           <label htmlFor="Mensaje">Consulta:</label>
@@ -154,7 +144,7 @@ const Contacto = () => {
             name="Mensaje"
             value={formData.Mensaje}
             onChange={handleChange}
-            className={`block h-40 w-full p-2 border ${formData.Mensaje === "" ? "border-red-500" : "border-gray-300"
+            className={`block h-40 w-full p-2 border ${isSubmitted && formData.Mensaje === "" ? "border-red-500" : "border-gray-300"
               } rounded-md`}
           ></textarea>
 
@@ -168,10 +158,9 @@ const Contacto = () => {
         </form>
       </div>
 
-      {/* Barra lateral */}
-      <div className="md:w-1/2 my-16  md:pl-4 md:py-2 bg-gray-800 p-4 flex flex-col items-center rounded-lg shadow-xl">
-        <div className="flex  items-center mt-20">
-          <p className="text-lg  font-medium mb-4 mr-2 text-white">
+      <div className="md:w-1/2 my-16 md:pl-4 md:py-2 bg-gray-800 p-4 flex flex-col items-center rounded-lg shadow-xl">
+        <div className="flex items-center mt-20">
+          <p className="text-lg font-medium mb-4 mr-2 text-white">
             Emiliano: +54 (351) 590-2963
           </p>
           <img
@@ -192,7 +181,7 @@ const Contacto = () => {
             className="cursor-pointer w-6 h-6 mb-4 hover:w-8 hover:h-8 transition-all duration-300"
           />
         </div>
-        <div className="flex items-center  mt-3">
+        <div className="flex items-center mt-3">
           <p className="text-lg font-medium mb-4 mr-2 text-white">
             soportedesarrollar@gmail.com
           </p>
@@ -207,8 +196,6 @@ const Contacto = () => {
       </div>
     </div>
   );
-
-
 };
 
 export default Contacto;

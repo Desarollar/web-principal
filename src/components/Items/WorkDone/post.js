@@ -65,7 +65,7 @@ const posts = [
 
             MEMO no solo ayuda a las personas con autismo a seguir una rutina estructurada, sino que también apoya a sus familias y acompañantes terapéuticos al proporcionarles una herramienta eficaz para gestionar las actividades diarias. Disponible en Google Play y App Store, MEMO es una solución accesible y práctica para mejorar la calidad de vida de sus usuarios.
         `,
-        image: 'https://i.ibb.co/XVbpsDj/memo1-Bajo-Peso.jpg',
+        image: 'https://i.ibb.co/XVbpsDj/memo1-Bajo-Peso.jpgn',
     },
     // Más posts...
 ]
