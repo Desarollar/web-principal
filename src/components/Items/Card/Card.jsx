@@ -12,7 +12,7 @@ const Card = ({ titulo, precio, descripcion, opciones }) => {
                     </span>
                     <a
                         className="relative group inline-block w-full py-4 px-6 text-center text-gray-50 hover:text-gray-900 bg-yellow-600 font-semibold rounded-full overflow-hidden transition duration-200"
-                        href="#"
+                        href="#contacto"
                     >
                         <div
                             className="absolute top-0 right-full w-full h-full bg-white transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"
