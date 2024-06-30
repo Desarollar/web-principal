@@ -1,9 +1,9 @@
 //
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import whatsappIcon from "../../../assets/whatsapp-icon.png";
-import mail from "../../../assets/mail.png";
-import imagen from "../../../assets/contact.png";
+// import whatsappIcon from "../../../assets/whatsapp-icon.png";
+// import mail from "../../../assets/mail.png";
+// import imagen from "../../../assets/contact.png";
 
 const Popup = ({ message, onClose }) => (
   <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
@@ -150,7 +150,7 @@ const Contacto = () => {
 
           <button
             type="submit"
-            className="mb-4 bg-blue-800 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded mt-4 self-center md:self-start"
+            className="mb-4 bg-violet-950 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 self-center md:self-start"
             value="Send"
           >
             Enviar

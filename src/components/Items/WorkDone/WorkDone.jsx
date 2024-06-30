@@ -12,9 +12,9 @@ const Servicios = () => {
         <div className="bg-white py-10 sm:py-12">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Servicios y soluciones digitales</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Trabajos realizados</h2>
                     <p className="mt-2 text-lg leading-8 text-gray-600">
-                        Potencia tu presencia online con nuestro equipo experto
+                        Potenciamos y optimizamos tu procesos de negocio 
                     </p>
                 </div>
                 <div className={`mx-auto mt-10 grid gap-8 ${selectedPost ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
@@ -28,7 +28,7 @@ const Servicios = () => {
                                 </div>
                                 <button
                                     onClick={() => handlePostClick(post.id)}
-                                    className="mt-4 bg-blue-500 hover:bg-blue-800 text-white py-2 px-4 rounded focus:outline-none"
+                                    className="mt-4 bg-violet-950 hover:bg-yellow-600 text-white py-2 px-4 rounded-xl focus:outline-none"
                                 >
                                     {selectedPost === post.id ? "Ocultar Detalles" : "Ver Detalles"}
                                 </button>

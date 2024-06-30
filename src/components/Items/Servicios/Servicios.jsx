@@ -20,7 +20,7 @@ const Servicios = () => {
                 <div className={`mx-auto mt-10 grid gap-8 ${selectedPost ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
                     {postsData.map((post) => (
                         <article key={post.id} className={`flex flex-col max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg ${selectedPost && selectedPost !== post.id ? 'hidden' : ''}`}>
-                            <img src={post.image} alt={post.title} className="h-64 object-cover mask-gradient-black-transparent   w-full" />
+                            <img src={post.image} alt={post.title} className="h-64 rounded-xl object-cover mask-gradient-black-transparent   w-full" />
                             <div className="bg-white p-6 flex flex-col justify-between flex-grow">
                                 <div>
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
@@ -28,7 +28,7 @@ const Servicios = () => {
                                 </div>
                                 <button
                                     onClick={() => handlePostClick(post.id)}
-                                    className="mt-4 bg-blue-500 hover:bg-blue-800 text-white py-2 px-4 rounded focus:outline-none"
+                                    className="mt-4  bg-violet-950 hover:bg-yellow-600  text-white py-2 px-4 rounded-xl focus:outline-none"
                                 >
                                     {selectedPost === post.id ? "Ocultar Detalles" : "Ver Detalles"}
                                 </button>
