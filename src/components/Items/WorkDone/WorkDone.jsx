@@ -20,7 +20,7 @@ const Servicios = () => {
                 <div className={`mx-auto mt-10 grid gap-8 ${selectedPost ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
                     {postsData.map((post) => (
                         <article key={post.id} className={`flex flex-col max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg ${selectedPost && selectedPost !== post.id ? 'hidden' : ''}`}>
-                            <img src={post.image} alt={post.title} className="h-64 object-cover w-full" />
+                            <img src={post.image} alt={post.title} className="h-64 rounded-xl object-cover w-full" />
                             <div className="bg-white p-6 flex flex-col justify-between flex-grow">
                                 <div>
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
@@ -39,9 +39,9 @@ const Servicios = () => {
                         <div className="bg-white rounded-lg shadow-lg flex flex-col justify-start">
                             {postsData.filter(post => post.id === selectedPost).map(post => (
                                 <div key={post.id}>
-
                                     <div className="mt-4 p-4 bg-gray-100 rounded-md mt-0">
-                                        <p className="text-gray-700">{post.description}</p>
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{post.title}</h3>
+                                        <p className="text-gray-700 whitespace-pre-line">{post.description}</p>
                                     </div>
                                 </div>
                             ))}

@@ -8,15 +8,15 @@ const posts = [
             `
             Para ayudar a Asegurandoando a lograr sus objetivos, implementamos una estrategia integral que incluyó varias acciones clave:
 
-            1. **Formularios de Contacto**: Desarrollamos formularios de contacto intuitivos y fáciles de usar que permiten a los clientes potenciales comunicarse directamente con el equipo de Asegurandoando, mejorando así la interacción y respuesta a consultas.
+            1. Formularios de Contacto: Desarrollamos formularios de contacto intuitivos y fáciles de usar que permiten a los clientes potenciales comunicarse directamente con el equipo de Asegurandoando, mejorando así la interacción y respuesta a consultas.
 
-            2. **Llamadas a la Acción con Botón de WhatsApp**: Integramos botones de WhatsApp en el sitio web, lo que facilita a los usuarios iniciar conversaciones rápidas y directas, incrementando las oportunidades de conversión y mejorando la atención al cliente.
+            2. Llamadas a la Acción con Botón de WhatsApp: Integramos botones de WhatsApp en el sitio web, lo que facilita a los usuarios iniciar conversaciones rápidas y directas, incrementando las oportunidades de conversión y mejorando la atención al cliente.
 
-            3. **Formularios de Cotización**: Creamos formularios de cotización personalizados que permiten a los usuarios solicitar presupuestos de seguros de manera rápida y eficiente, optimizando el proceso de ventas y aumentando la captación de leads.
+            3. Formularios de Cotización: Creamos formularios de cotización personalizados que permiten a los usuarios solicitar presupuestos de seguros de manera rápida y eficiente, optimizando el proceso de ventas y aumentando la captación de leads.
 
-            4. **Presentación de Servicios**: Desarrollamos secciones dedicadas a la presentación de los servicios ofrecidos, destacando las ventajas y características de cada tipo de seguro, proporcionando información clara y accesible para los clientes.
+            4. Presentación de Servicios: Desarrollamos secciones dedicadas a la presentación de los servicios ofrecidos, destacando las ventajas y características de cada tipo de seguro, proporcionando información clara y accesible para los clientes.
 
-            5. **Posicionamiento Online y Presencia Web**: Implementamos estrategias de SEO para asegurar un posicionamiento claro y destacado en los motores de búsqueda. Esto incluyó la optimización de contenido y la mejora de la estructura del sitio web, garantizando una mayor visibilidad y atracción de tráfico orgánico.
+            5. Posicionamiento Online y Presencia Web: Implementamos estrategias de SEO para asegurar un posicionamiento claro y destacado en los motores de búsqueda. Esto incluyó la optimización de contenido y la mejora de la estructura del sitio web, garantizando una mayor visibilidad y atracción de tráfico orgánico.
 
             Con estas acciones, Asegurandoando logró no solo una mayor presencia online, sino también una plataforma eficiente para la venta y asesoramiento de seguros, brindando transparencia y confianza a sus clientes en la contratación de seguros vendidos de forma online.
         `,
@@ -30,15 +30,15 @@ const posts = [
         description: `
             Para solucionar los problemas administrativos del Instituto de Cultura Contemporánea, desarrollamos e implementamos un sistema web integral con las siguientes características:
 
-            1. **Gestión de Inscripciones**: El sistema permite llevar un registro ordenado y actualizado de todas las inscripciones, eliminando la necesidad de múltiples planillas de cálculo y asegurando que la información esté sincronizada y accesible en todo momento.
+            1. Gestión de Inscripciones: El sistema permite llevar un registro ordenado y actualizado de todas las inscripciones, eliminando la necesidad de múltiples planillas de cálculo y asegurando que la información esté sincronizada y accesible en todo momento.
 
-            2. **Control de Matrículas y Cuotas Mensuales**: Implementamos módulos específicos para la gestión de matrículas y cuotas mensuales, facilitando el seguimiento de pagos pendientes y realizados, y mejorando el flujo de caja del instituto.
+            2. Control de Matrículas y Cuotas Mensuales: Implementamos módulos específicos para la gestión de matrículas y cuotas mensuales, facilitando el seguimiento de pagos pendientes y realizados, y mejorando el flujo de caja del instituto.
 
-            3. **Administración de Ingresos y Egresos**: El sistema incluye funcionalidades para registrar y controlar los ingresos y egresos del instituto, proporcionando una visión clara y detallada de las finanzas.
+            3. Administración de Ingresos y Egresos: El sistema incluye funcionalidades para registrar y controlar los ingresos y egresos del instituto, proporcionando una visión clara y detallada de las finanzas.
 
-            4. **Panel de Información Estadística**: Desarrollamos un panel de control que ofrece estadísticas en tiempo real sobre diversos aspectos del instituto, como el estado de las matrículas, la situación de los cursos, la asignación de profesores, y el seguimiento de pagos y cobranzas.
+            4. Panel de Información Estadística: Desarrollamos un panel de control que ofrece estadísticas en tiempo real sobre diversos aspectos del instituto, como el estado de las matrículas, la situación de los cursos, la asignación de profesores, y el seguimiento de pagos y cobranzas.
 
-            5. **Centralización y Sincronización de Datos**: La solución reemplazó un montón de planillas de cálculo que se usaban de forma desincronizada, permitiendo una gestión centralizada y accesible desde cualquier lugar.
+            5. Centralización y Sincronización de Datos: La solución reemplazó un montón de planillas de cálculo que se usaban de forma desincronizada, permitiendo una gestión centralizada y accesible desde cualquier lugar.
 
             Gracias a esta implementación, el Instituto de Cultura Contemporánea ha mejorado significativamente su eficiencia administrativa, permitiendo al personal enfocarse en brindar una mejor experiencia educativa a sus alumnos.
         `,
@@ -52,16 +52,16 @@ const posts = [
         description: `
             MEMO ofrece una solución innovadora y personalizada para ayudar a las personas con autismo a organizar su rutina diaria. La aplicación incluye varias características diseñadas para mejorar la experiencia de los usuarios y sus familias:
 
-            1. **Personalización con Pictogramas y Fotos Propias**: Los usuarios pueden personalizar su agenda utilizando pictogramas universales o fotos propias de su celular, lo que facilita la identificación y comprensión de las actividades diarias.
+            1. Personalización con Pictogramas y Fotos Propias: Los usuarios pueden personalizar su agenda utilizando pictogramas universales o fotos propias de su celular, lo que facilita la identificación y comprensión de las actividades diarias.
 
-            2. **Simplicidad y Lúdica**: La aplicación ha sido diseñada para ser simple y fácil de usar, con una interfaz intuitiva que permite a los usuarios interactuar de manera lúdica y didáctica, haciendo que la organización diaria sea una actividad agradable.
+            2. Simplicidad y Lúdica: La aplicación ha sido diseñada para ser simple y fácil de usar, con una interfaz intuitiva que permite a los usuarios interactuar de manera lúdica y didáctica, haciendo que la organización diaria sea una actividad agradable.
 
-            3. **Perfil Tutor**: El perfil tutor está destinado a padres o acompañantes terapéuticos que apoyan a la persona con TEA. Este perfil incluye diversas funcionalidades para configurar y gestionar la agenda, asegurando que las necesidades específicas del usuario sean atendidas.
+            3. Perfil Tutor: El perfil tutor está destinado a padres o acompañantes terapéuticos que apoyan a la persona con TEA. Este perfil incluye diversas funcionalidades para configurar y gestionar la agenda, asegurando que las necesidades específicas del usuario sean atendidas.
 
-            4. **Funcionalidades del Perfil Tutor**: 
-                - **Configuración de Rutinas**: Permite al tutor configurar y organizar las actividades diarias del usuario.
-                - **Elementos Gráficos**: Utiliza gráficos y elementos visuales para mostrar las diferentes opciones de configuración, facilitando la personalización de la agenda.
-                - **Gestión de Actividades**: Incluye opciones para añadir, editar y eliminar actividades, así como asignar pictogramas o fotos específicas a cada una.
+            4. Funcionalidades del Perfil Tutor: 
+                - Configuración de Rutinas: Permite al tutor configurar y organizar las actividades diarias del usuario.
+                - Elementos Gráficos: Utiliza gráficos y elementos visuales para mostrar las diferentes opciones de configuración, facilitando la personalización de la agenda.
+                - Gestión de Actividades: Incluye opciones para añadir, editar y eliminar actividades, así como asignar pictogramas o fotos específicas a cada una.
 
             MEMO no solo ayuda a las personas con autismo a seguir una rutina estructurada, sino que también apoya a sus familias y acompañantes terapéuticos al proporcionarles una herramienta eficaz para gestionar las actividades diarias. Disponible en Google Play y App Store, MEMO es una solución accesible y práctica para mejorar la calidad de vida de sus usuarios.
         `,
