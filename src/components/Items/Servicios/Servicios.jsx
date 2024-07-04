@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import postsData from "./post";
 import React from "react";
 
 const Servicios = () => {
     const [selectedPost, setSelectedPost] = useState(null);
+    const containerRef = useRef(null);
 
     const handlePostClick = (postId) => {
         setSelectedPost(postId === selectedPost ? null : postId);
@@ -17,7 +18,7 @@ const Servicios = () => {
             } else if (part.startsWith("SS") && part.endsWith("SS")) {
                 return <u key={index}>{part.slice(2, -2)}</u>; // Aplica subrayado
             } else if (part.startsWith("KK") && part.endsWith("KK")) {
-                return <em key={index}>{part.slice(2, -2)}</em>; // Aplica cursiva
+                return <em className="font-sans text-lg" key={index}>{part.slice(2, -2)}</em>; // Aplica cursiva
             } else if (part === "\n") {
                 return <br key={index} />; // Aplica salto de línea
             }
@@ -25,8 +26,25 @@ const Servicios = () => {
         });
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (containerRef.current) {
+                const { top, bottom } = containerRef.current.getBoundingClientRect();
+                if (top > window.innerHeight || bottom < 0) {
+                    setSelectedPost(null);
+                }
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <div className="bg-white py-10 sm:py-12">
+        <div ref={containerRef} className="bg-white py-10 sm:py-12">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Servicios y soluciones digitales</h2>
