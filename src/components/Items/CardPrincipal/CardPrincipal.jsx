@@ -36,7 +36,7 @@ const CardPrincipal = () => {
                             {isMobile ? (
                                 <img className="absolute top-0 left-4 w-full h-full lg:w-[38rem] max-w-none rounded-md bg-white/5 mask-gradient-right ring-1 ring-white/10 object-cover" src="https://i.ibb.co/HXtmj1r/foto-card-principal.png" alt="App screenshot" />
                             ) : (
-                                <img className="absolute top-0 left-0 w-full lg:w-[38rem] max-w-none rounded-md bg-white/5 mask-gradient-right ring-1 ring-white/10 object-cover object-top" src="https://i.ibb.co/Y86d935/desarollar.jpg" alt="App screenshot" />
+                                <img className="absolute top-0 left-0 w-full lg:w-[38rem] max-w-none rounded-md bg-white/5 mask-gradient-right ring-1 ring-white/10 object-cover object-top" src="https://firebasestorage.googleapis.com/v0/b/imagenes-memo.appspot.com/o/black-white-portrait-digital-nomads.jpg?alt=media&token=3a4f17f5-643f-4df6-aa9e-f3612158bab5" alt="App screenshot" />
                             )}
                         </div>
                     </div>
