@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
 import Layout from "./components/Pages/Layout/Layout.jsx";
 import Home from "./components/Pages/Home/Home.jsx";
-import Contacto from "./components/Pages/Contacto/Contacto.jsx";
 import "./index.css";
+
 
 const router = createBrowserRouter([
   {
@@ -16,10 +16,8 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: "/contacto",
-        element: <Contacto />,
-      },
+      
+
       {
         path: "*",
         element: (
@@ -36,9 +34,7 @@ const router = createBrowserRouter([
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-
-        <RouterProvider router={router} />
-
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

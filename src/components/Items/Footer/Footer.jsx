@@ -1,17 +1,28 @@
-
-
+import Popup from "../Popup/Popup";
+import { useState } from "react";
+import privacidadTexto from "./privacidad";
+import terminosServicioTexto from "./terminos";
 const Footer = () => {
-    return (
+    const [popupVisible, setPopupVisible] = useState(false);
+    const [popupMessage, setPopupMessage] = useState("");
+    const [nombreBoton, setNombreBoton] = useState("");
+
+    const closePopup = () => {
+        setPopupVisible(false);
+      };
+
+      return (
         <footer className="bg-gray-800">
+            {popupVisible && <Popup message={popupMessage} onClose={closePopup} buttonName={nombreBoton} />}
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-4">
                 <div className="flex justify-between items-center">
                     <div className="text-gray-400">
-                        © 2024 Your Company. All rights reserved.
+                        © 2024 Desarrollar. All rights reserved.
                     </div>
                     <div className="flex space-x-4">
-                        <a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a>
-                        <a href="#" className="text-gray-400 hover:text-white">Terms of Service</a>
-                        <a href="#" className="text-gray-400 hover:text-white">Contact Us</a>
+                        <a href="#" className="text-gray-400 hover:text-white" onClick={() => {setNombreBoton("Cerrar");setPopupMessage(privacidadTexto); setPopupVisible(true)}}>Políticas de Privacidad</a>
+                        <a href="#" className="text-gray-400 hover:text-white" onClick={() => {setNombreBoton("Cerrar");setPopupMessage(terminosServicioTexto); setPopupVisible(true)}}>Términos del Servicio</a>
+                        <a href="#contacto" className="text-gray-400 hover:text-white">Contáctenos</a>
                     </div>
                 </div>
                 <div className="flex justify-center space-x-4 mt-4">
