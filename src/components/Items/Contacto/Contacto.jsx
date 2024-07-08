@@ -1,9 +1,6 @@
-//
-import { useRef, useState } from "react";
+import  { useRef, useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import emailjs from "emailjs-com";
-// import whatsappIcon from "../../../assets/whatsapp-icon.png";
-// import mail from "../../../assets/mail.png";
-// import imagen from "../../../assets/contact.png";
 
 const Popup = ({ message, onClose }) => (
   <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
@@ -21,16 +18,16 @@ const Popup = ({ message, onClose }) => (
 
 const Contacto = () => {
   const form = useRef();
-  const [formData, setFormData] = useState({
-    Nombre: "",
-    Telefono: "",
-    Email: "",
-    Mensaje: "",
-  });
+  const contactInfo = useSelector((state) => state.contact.contactInfo);
+  const [formData, setFormData] = useState(contactInfo);
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const [toHome, setToHome] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    setFormData(contactInfo);
+  }, [contactInfo]);
 
   const handleWhatsAppClick = (phoneNumber) => {
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
@@ -123,44 +120,46 @@ const Contacto = () => {
                 name="Telefono"
                 value={formData.Telefono}
                 onChange={handleChange}
-                className={`block w-full p-2 border ${isSubmitted && formData.Telefono === "" ? "border-red-500" : "border-gray-300"
+                className={`block w-full  p-2 border ${isSubmitted && formData.Telefono === "" ? "border-red-500" : "border-gray-300"
                   } rounded-md`}
               />
             </div>
-          </div >
-          <label htmlFor="Email">Correo Electrónico:</label>
-          <input
-            type="Email"
-            id="Email"
-            name="Email"
-            value={formData.Email}
-            onChange={handleChange}
-            className={`block w-full p-2 border ${isSubmitted && formData.Email === "" ? "border-red-500" : "border-gray-300"
-              } rounded-md`}
-          />
-          <label htmlFor="Mensaje">Consulta:</label>
-          <textarea
-            id="Mensaje"
-            name="Mensaje"
-            value={formData.Mensaje}
-            onChange={handleChange}
-            className={`block h-40 w-full p-2 border ${isSubmitted && formData.Mensaje === "" ? "border-red-500" : "border-gray-300"
-              } rounded-md`}
-          ></textarea>
-
-          <button
-            type="submit"
-            className="mb-4 bg-violet-950 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 self-center md:self-start"
-            value="Send"
-          >
-            Enviar
-          </button>
+          </div>
+          <div className="text-gray-500 mt-2">
+            <label htmlFor="Email">Correo Electrónico:</label>
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              value={formData.Email}
+              onChange={handleChange}
+              className={`block w-full  p-2 border ${isSubmitted && formData.Email === "" ? "border-red-500" : "border-gray-300"
+                } rounded-md`}
+            />
+          </div>
+          <div className="text-gray-500 mt-2">
+            <label htmlFor="Mensaje">Mensaje:</label>
+            <textarea
+              id="Mensaje"
+              name="Mensaje"
+              value={formData.Mensaje}
+              onChange={handleChange}
+              className={`block w-full  p-2 border ${isSubmitted && formData.Mensaje === "" ? "border-red-500" : "border-gray-300"
+                } rounded-md`}
+            />
+          </div>
+          <div className="text-gray-500 mt-2">
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+            >
+              Enviar
+            </button>
+          </div>
         </form>
       </div>
-
-      <div className="md:w-1/2 my-16 md:pl-4 md:py-2 bg-blue-950 bg-opacity-20 border-2 border-gray-300 p-4 flex flex-col items-center rounded-lg shadow-xl">
-
-        <div className="flex items-center mt-20">
+      <div className="md:w-1/2 my-16 md:pl-4 md:py-2 bg-blue-950 h-56 bg-opacity-20 border-2 border-gray-300 p-4 flex flex-col items-center rounded-lg shadow-xl justify-center">
+        <div className="flex items-center mt-3">
           <p className="text-lg font-medium mb-4 mr-2 text-gray-500">
             Emiliano: +54 (351) 590-2963
           </p>
@@ -173,7 +172,7 @@ const Contacto = () => {
         </div>
         <div className="flex items-center mt-3">
           <p className="text-lg font-medium mb-4 mr-2 text-gray-500">
-          Jorge:&nbsp;&#8201;&#8201;&nbsp; +54 (02281) 53-1457
+            Jorge:&nbsp;&#8201;&#8201;&nbsp; +54 (02281) 53-1457
           </p>
           <img
             onClick={() => handleWhatsAppClick("5492281531457")}
@@ -186,7 +185,7 @@ const Contacto = () => {
           <p className="text-lg font-medium mb-4 mr-2 text-gray-500">
             soportedesarrollar@gmail.com
           </p>
-          <a href="mailto:marialauralobrundo@gmail.com">
+          <a href="mailto:soportedesarrollar@gmail.com">
             <img
               src='data:image/svg+xml,%3Csvg width="213px" height="213px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="%23002e7a"%3E%3Cg id="SVGRepo_bgCarrier" stroke-width="0"%3E%3C/g%3E%3Cg id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"%3E%3C/g%3E%3Cg id="SVGRepo_iconCarrier"%3E %3Cpath d="M0 0h48v48H0z" fill="none"%3E%3C/path%3E %3Cg id="Shopicon"%3E %3Cpath d="M24,44c5.343,0,10.365-2.08,14.143-5.858l-2.829-2.828C32.292,38.336,28.274,40,24,40c-8.822,0-16-7.178-16-16 S15.178,8,24,8s16,7.178,16,16c0,2.206-1.794,4-4,4s-4-1.794-4-4v-8h-4v1.079C26.822,16.397,25.459,16,24,16c-4.418,0-8,3.582-8,8 s3.582,8,8,8c2.394,0,4.536-1.057,6.003-2.723C31.47,30.942,33.611,32,36,32c4.411,0,8-3.589,8-8c0-11.028-8.972-20-20-20 S4,12.972,4,24S12.972,44,24,44z M24,28c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S26.206,28,24,28z"%3E%3C/path%3E %3C/g%3E %3C/g%3E%3C/svg%3E'
               alt="Correo electrónico"

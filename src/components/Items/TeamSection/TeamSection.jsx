@@ -3,7 +3,7 @@ const people = [
         name: 'Belen Gallardo',
         role: 'Project Manager | Team Leader | Desarrolladora Full Stack',
         imageUrl:
-            'https://media.licdn.com/dms/image/D4D35AQGq3grHGBRUQg/profile-framedphoto-shrink_200_200/0/1687735167585?e=1719932400&v=beta&t=5JIbvCd8udQJO6SVBFsj6pwbDuHfcs73TDv7Z8m1cCo',
+            'https://avatars.githubusercontent.com/u/116088405?v=4',
         text: 'Belen aporta un enfoque centrado en el usuario a nuestro proceso de desarrollo. Como diseñadora y desarrolladora full stack, se asegura de que nuestras aplicaciones sean intuitivas y fáciles de usar. Con un ojo agudo para el diseño y una comprensión profunda de la psicología del usuario, Belen crea interfaces que no solo son estéticamente agradables, sino que también mejoran la satisfacción y retención del usuario.'
     },
     {
