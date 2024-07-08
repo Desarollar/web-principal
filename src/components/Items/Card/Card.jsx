@@ -1,6 +1,18 @@
-
+import { useDispatch } from 'react-redux';
+import { setContactInfo } from '../../../redux/slices/contactoSlice';
 
 const Card = ({ titulo, precio, descripcion, opciones }) => {
+    const dispatch = useDispatch();
+
+    const handleConsultarClick = () => {
+        dispatch(setContactInfo({
+            Nombre: '',
+            Telefono: '',
+            Email: '',
+            Mensaje: `Hola queria consultar sobre ${titulo} - me interesaria  saber el precio.`,
+        }));
+    };
+
     return (
         <div>
             <div className="max-w-[300px] w-full pt-10 px-10 pb-8 bg-gray-900 rounded-3xl">
@@ -13,6 +25,7 @@ const Card = ({ titulo, precio, descripcion, opciones }) => {
                     <a
                         className="relative group inline-block w-full py-4 px-6 text-center text-gray-50 hover:text-gray-900 bg-yellow-600 font-semibold rounded-full overflow-hidden transition duration-200"
                         href="#contacto"
+                        onClick={handleConsultarClick}
                     >
                         <div
                             className="absolute top-0 right-full w-full h-full bg-white transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"
@@ -38,7 +51,7 @@ const Card = ({ titulo, precio, descripcion, opciones }) => {
                 </ul>
             </div>
         </div>
-    )
+    );
 };
 
 export default Card;

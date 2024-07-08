@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
+import { Provider } from 'react-redux'; // Importa Provider
+import { store } from './redux/store'; // Importa el store
 import Layout from "./components/Pages/Layout/Layout.jsx";
 import Home from "./components/Pages/Home/Home.jsx";
 import "./index.css";
-
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,6 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      
-
       {
         path: "*",
         element: (
@@ -33,9 +32,11 @@ const router = createBrowserRouter([
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <Provider store={store}> {/* Envuelve con Provider */}
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
